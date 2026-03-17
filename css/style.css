@@ -1,0 +1,296 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+:root {
+    --nav-bg: #7A3262;
+    --nav-text: #ffffff;
+    --nav-hover: #1f2fd1;
+    
+    --date-btn-color: #47012a;
+    --date-btn-text: #e6e6e6;
+    
+    --filter-btn-color: #47525c;
+    --filter-btn-text: #d5d5d5;
+}
+
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+body {
+	font-family:'Lucida Console';
+	background:rgb(43,6,99);
+	color:rgb(213, 240, 242);
+	margin:35px;
+	
+}
+
+
+#container {
+	
+	border: 2px solid black;
+	background:rgba(110, 1, 120,.25);
+	width: 90%;
+	max-width: 1250px;
+	margin:auto;
+	padding: 15px;
+	
+	
+	h1 {
+		font-size: 55px;
+	}
+	
+	ul {
+		list-style:none;
+		padding-left:0px;
+	}
+	
+	li {
+		display: inline;
+		
+	}
+    
+    nav {
+    width: 100%;
+    padding: 5px 0;
+        
+    }
+    
+    iframe {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    }
+    
+    .hidden {
+        display:none;
+    }
+
+    
+    .nav-buttons {
+        display: flex; /*Enables flex layout*/
+        justify-content: space-evenly; /*Distributes items horizontally*/
+        align-items:cente;
+        list-style: none;
+        padding: 0;
+        margin:0;
+    }
+    
+    .nav-buttons li {
+        flex:1;
+    }
+
+    .nav-buttons li a {        
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        
+        text-align: center;
+        line-height: 1.2;
+        
+        flex-direction: column;
+        
+        width: 100%;
+        height:75px;
+        
+        font-size: 1rem; /* Adjust font size */
+        font-weight: bold;
+        font-family: "Silkscreen", monospace;
+        
+        text-decoration: none;
+        
+        background-color: var(--nav-bg);
+        color: var(--nav-text);
+        
+        clip-path: polygon(
+            10% 10%, /*top left curve start*/
+            90% 10%, /*top right curve start*/
+            50% 100% /*bottom center point*/
+        
+        );
+        
+        /*background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M 10 10 Q 50 -10 90 10 L 50 90 Z' fill='%23142186'/></svg>") no-repeat center;
+        background-size: cover;*/
+        
+        transition: transform 0.3s ease;
+    }
+
+    .nav-buttons li a:hover {
+        transform: scale(1.1); /* Slight hover effect */
+        filter:brightness(1.2);
+        background-color: var(--nav-hover);
+    }
+	
+	figure {
+		margin:0px;
+	}
+	
+	figure img {
+		width: 80%;
+		height: 80%;
+        display:block;
+        margin:auto;
+        
+	
+	}
+	
+	figcaption, footer {
+		font-size: 0.75em;		
+	}
+    
+    .journal-item{
+        display: none;
+    }
+    
+    .journal-item.active {
+        display: block;
+    }
+	
+    .journal-item img {
+        width: 100%;
+        max-width: 600px;
+        
+        aspect-ratio: 3 / 4;
+        object-fit: contain;
+        
+        display: block;
+        margin: 0 auto;
+        
+        padding: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+	
+    .journal-display {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .journal-catalog_nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .journal-catalog_nav button {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+        
+        background-color: var(--date-btn-color);
+        color: var(--date-btn-text);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    .journal-filters button {
+        padding: 5px 15px;
+        font-size: 1rem;
+        
+        background-color: var(--filter-btn-color);
+        color: var(--filter-btn-text);
+        
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 9999px;
+    }
+    
+    .vlog-catalog_nav button {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+        
+        background-color: var(--date-btn-color);
+        color: var(--date-btn-text);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    .vlog-filters button {
+        padding: 5px 15px;
+        font-size: 1rem;
+        
+        background-color: var(--filter-btn-color);
+        color: var(--filter-btn-text);
+        
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 9999px;
+    }
+    
+    .video-display iframe {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .video-display_vertical iframe {
+        aspect-ratio: 9/16;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .interview-card {
+        position: relative;
+        aspect-ratio: 16/9;
+    }
+    
+    .interview-card img {
+        cursor: pointer;
+        
+        width: 100%;
+        display: block;
+    }
+    
+    .interview-card img, .interview-card iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+	
+}
+
+    
+    @media (max-width: 1140px) {
+        #container .nav-buttons li a {
+            clip-path: none;
+            font-size: 0.75rem;
+            height:25px;
+            padding: 5px;
+        }
+        
+        #container h1 {
+            font-size: 4vw;
+        }
+        
+        #container .journal-catalog_nav {
+            height: 75px;
+            overflow-y: auto;
+        }
+        
+        #container .journal-filters button {
+            padding: 5px 7px;
+        }
+        
+        #container .journal-item img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 750px) {
+        #container .journal-display {
+            overflow: hidden;
+        }
+    }
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>Getting Stuck, The Way We Do</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+	
+</head>
+
+
+<body>
+	
+  <div id="container">
+	  
+	  
+	<header>
+	  <h1>Getting Stuck, The Way We Do</h1>
+	</header>
+	  
+	<nav>
+	   <ul class="nav-buttons">
+	       <li><a href="index.html">Home</a></li>	       
+	       <li><a href="journals.html">Journals</a></li>
+           <li><a href="vlogs.html">Vlogs</a></li>
+           <li><a href="interviews.html">Interviews</a></li>
+	       <li><a href="final-videos.html">Deep Dives</a></li>	
+	   </ul>	  
+	</nav>
+      
+      <header>
+          <h2>Vlog Entries</h2>
+          <p>Sort by filter or All for chronological.</p>
+      </header>
+      
+	  
+	  <main>
+          
+        <div class="vlog-filters">
+            <button data-filter="all" class="active">ALL</button>
+            <button data-filter="DigitalFootprint">Digital Footprint</button>
+            <button data-filter="Identity">Identity</button>  
+            <button data-filter="Reflection">Reflection</button>
+            <button data-filter="SelfApplauding">Self-Applauding</button>
+
+        </div>
+          
+          <p></p>
+          
+          <div class="vlog-catalog_nav">
+              <button data-entry="yqPmgSbzhvI" data-tags="DigitalFootprint" class="hidden">Vlog 1</button>
+              <button data-entry="B7tpTgqLdB8" data-tags="DigitalFootprint" class="hidden">Vlog 2</button>
+              <button data-entry="-HcuBk9bmHk" data-tags="SelfApplauding" class="hidden">Vlog 3</button>
+              <button data-entry="wVu1tToGAYI" data-tags="Identity" class="hidden">Vlog 4</button>
+              <button data-entry="E3IQKXP1QGE" data-tags="Reflection" class="hidden">Vlog 5</button>
+              <button data-entry="Zi2wK5HwKm8" data-tags="Reflection" class="hidden">Vlog 6</button>
+          
+          </div>
+          
+          <p></p>
+          
+        <div class="video-display_vertical">          
+          <iframe width="560" height="315"
+                  src=""
+                  allowfullscreen>
+          </iframe>
+        </div>
+		    
+	  
+	  </main>
+	  
+	  
+
+	  
+	  <footer>	  
+	  <p>&#169;Jared Eyler <span id="year"></span></p>	  
+	  </footer>
+      
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear()</script>
+	  
+
+
+  </div><!-- close "container" -->
+  
+    <script src="vlogs.js"></script>
+
+</body>
+	
+</html> 
