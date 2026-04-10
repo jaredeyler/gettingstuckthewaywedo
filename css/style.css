@@ -147,6 +147,7 @@ body {
     
     .journal-item{
         display: none;
+		padding: 15px;
     }
     
     .journal-item.active {
@@ -166,9 +167,31 @@ body {
         padding: 15px;
         box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
+
+	.journal-item.has-vlog.active {
+        display:flex;
+        gap:30px;
+    }
+    
+    .journal-item.has-vlog .journal-content {
+        flex: 1;
+        min-width: 0;
+        border-right: 3px solid rgba(0, 0, 0, 0.5);
+        padding-right: 30px;
+    }
+      .journal-item.has-vlog iframe {
+        flex: 1;
+        min-width: 0;
+        aspect-ratio: 9/16;
+        max-width:550px;
+    }
+    
+    .journal-item.has-vlog .journal-content img {
+        max-width: 100%;
+    }
 	
     .journal-display {
-        max-width: 700px;
+        max-width: 1500px;
         margin: 0 auto;
     }
     
